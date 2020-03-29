@@ -27,7 +27,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _3_1_postHasNotType(){
+    public void _3_1_postHasNotTypeTest(){
 
         post = new MethodsSettings();
 
@@ -37,7 +37,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _3_2_postHasNotTax(){
+    public void _3_2_postHasNotTaxTest(){
 
         post = new MethodsSettings();
 
