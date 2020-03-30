@@ -11,7 +11,7 @@ public class TestProduct {
     MethodsSettings get;
 
     @Test
-    public void _1_1_createProductTest(){
+    public void post_1_1_CreateProductTest(){
 
         post = new MethodsSettings();
 
@@ -19,7 +19,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _2_1_getProductTest() {
+    public void get_2_1_GetProductTest() {
 
         get = new MethodsSettings();
 
@@ -27,7 +27,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _3_1_postHasNotTypeTest(){
+    public void post_2_1_HasNotTypeTest(){
 
         post = new MethodsSettings();
 
@@ -37,7 +37,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _3_2_postHasNotTaxTest(){
+    public void post_2_6_HasNotTaxTest(){
 
         post = new MethodsSettings();
 
@@ -47,7 +47,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _4_1_incorrectFieldTypeTest(){
+    public void post_3_1_IncorrectFieldTypeTest(){
 
         post = new MethodsSettings();
 
@@ -57,7 +57,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _4_2_incorrectFieldPriceTest(){
+    public void post_3_2_IncorrectFieldPriceTest(){
 
         post = new MethodsSettings();
 
@@ -67,7 +67,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _5_1_invalidAuthorizationCreateTest(){
+    public void post_4_3_InvalidAuthorizationCreateTest(){
 
         post = new MethodsSettings();
 
@@ -75,7 +75,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _5_2_invalidAuthorizationGetTest(){
+    public void get_3_2_InvalidAuthorizationGetProductTest(){
 
         get = new MethodsSettings();
 
@@ -83,7 +83,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _6_1_invalidStoreIdCreateProductTest(){
+    public void post_5_1_InvalidStoreIdCreateProductTest(){
 
         post = new MethodsSettings();
 
@@ -91,7 +91,7 @@ public class TestProduct {
     }
 
     @Test
-    public void _6_2_invalidProductIdGetProductTest(){
+    public void get_2_2_InvalidProductIdGetProductTest(){
 
         get = new MethodsSettings();
 
