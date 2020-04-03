@@ -1,9 +1,9 @@
 package test_suite;
 
 import org.junit.Test;
+import settings.Bodies;
 import settings.MethodsSettings;
-
-import static settings.Bodies.*;
+import settings.Product;
 
 public class TestProduct {
 
@@ -15,7 +15,9 @@ public class TestProduct {
 
         post = new MethodsSettings();
 
-        post.correctCreateProduct();
+        Bodies body_1_1 = new Bodies();
+
+        post.correctCreateProduct(body_1_1.getCorrectBody());
     }
 
     @Test
@@ -33,7 +35,9 @@ public class TestProduct {
 
         String fieldCheck = "type";
 
-        post.hasNotRequiredField(bodyHasNotType, fieldCheck);
+        Bodies body_2_1 = new Bodies();
+
+        post.hasNotRequiredField(body_2_1.getBodyHasNotType(), fieldCheck);
     }
 
     @Test
@@ -43,7 +47,9 @@ public class TestProduct {
 
         String fieldCheck = "tax";
 
-        post.hasNotRequiredField(bodyHasNotTax, fieldCheck);
+        Bodies body_2_6 = new Bodies();
+
+        post.hasNotRequiredField(body_2_6.getBodyHasNotTax(), fieldCheck);
     }
 
     @Test
@@ -53,7 +59,9 @@ public class TestProduct {
 
         String fieldType = "type";
 
-        post.incorrectFieldCreateProduct(bodyInvalidType, fieldType);
+        Bodies body_3_1 = new Bodies();
+
+        post.incorrectFieldCreateProduct(body_3_1.getBodyInvalidType(), fieldType);
     }
 
     @Test
@@ -63,7 +71,9 @@ public class TestProduct {
 
         String fieldType = "price";
 
-        post.incorrectFieldCreateProduct(bodyInvalidPrice, fieldType);
+        Bodies body_3_2 = new Bodies();
+
+        post.incorrectFieldCreateProduct(body_3_2.getBodyInvalidPrice(), fieldType);
     }
 
     @Test
@@ -71,7 +81,9 @@ public class TestProduct {
 
         post = new MethodsSettings();
 
-        post.invalidAuthorizationCreateProduct("ff424gfd5v");
+        Bodies body_4_3 = new Bodies();
+
+        post.invalidAuthorizationCreateProduct(body_4_3.getCorrectBody());
     }
 
     @Test
@@ -79,23 +91,31 @@ public class TestProduct {
 
         get = new MethodsSettings();
 
-        get.invalidAuthorizationGetProduct("gfdgfd32aa44ag");
+        get.invalidAuthorizationGetProduct();
     }
 
     @Test
     public void post_5_1_InvalidStoreIdCreateProductTest(){
 
+        Product product_5_1 = new Product();
+        product_5_1.setStoreId("201fsd014-B61E-4026-8062-C72AfsF63DF");
+
         post = new MethodsSettings();
 
-        post.invalidStoreIdPostProduct("201fsd014-B61E-4026-8062-C72AfsF63DF");
+        Bodies body_5_1 = new Bodies();
+
+        post.invalidStoreIdPostProduct(product_5_1.getStoreId(), body_5_1.getCorrectBody());
     }
 
     @Test
     public void get_2_2_InvalidProductIdGetProductTest(){
 
+        Product product_2_2 = new Product();
+        product_2_2.setProductId("7ffgf0b5-565f-4084-aa21-40dffda");
+
         get = new MethodsSettings();
 
         get.invalidProductIdOrStoreIdGetProduct
-                ("20191014-B61E-4026-8062-C72AD0FF63DF", "7ffgf0b5-565f-4084-aa21-40dffda");
+                (product_2_2.getStoreId(), product_2_2.getProductId());
     }
 }

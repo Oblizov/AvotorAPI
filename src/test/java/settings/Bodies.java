@@ -2,7 +2,7 @@ package settings;
 
 public class Bodies {
 
-    public static final String correctBody = "{\n" +
+    private final String correctBody = "{\n" +
             "\"type\": \"NORMAL\",\n" +
             "\"name\": \"pig\",\n" +
             "\"code\": \"5166409114\",\n" +
@@ -16,7 +16,11 @@ public class Bodies {
             "\"article_number\": \"Article\"\n" +
             "}";
 
-    public static final String bodyHasNotType = "{\n" +
+    public String getCorrectBody(){
+        return correctBody;
+    }
+
+    private final String bodyHasNotType = "{\n" +
             "\"name\": \"pig\",\n" +
             "\"code\": \"5166409114\",\n" +
             "\"price\": 5601.74,\n" +
@@ -29,7 +33,11 @@ public class Bodies {
             "\"article_number\": \"валидное\"\n" +
             "}";
 
-    public static final String bodyHasNotTax = "{\n" +
+    public String getBodyHasNotType(){
+        return bodyHasNotType;
+    }
+
+    private final String bodyHasNotTax = "{\n" +
             "\"type\": \"NORMAL\",\n" +
             "\"name\": \"pig\",\n" +
             "\"code\": \"5166409114\",\n" +
@@ -42,7 +50,11 @@ public class Bodies {
             "\"article_number\": \"валидное\"\n" +
             "}";
 
-    public static final String bodyInvalidType = "{\n" +
+    public String getBodyHasNotTax(){
+        return bodyHasNotTax;
+    }
+
+    private final String bodyInvalidType = "{\n" +
             "\"type\": \"NORMAS\",\n" +
             "\"name\": \"pig\",\n" +
             "\"code\": \"5166409114\",\n" +
@@ -56,7 +68,11 @@ public class Bodies {
             "\"article_number\": \"валидное\"\n" +
             "}";
 
-    public static final String bodyInvalidPrice = "{\n" +
+    public String getBodyInvalidType(){
+        return bodyInvalidType;
+    }
+
+    private final String bodyInvalidPrice = "{\n" +
             "\"type\": \"NORMAL\",\n" +
             "\"name\": \"pig\",\n" +
             "\"code\": \"5166409114\",\n" +
@@ -69,4 +85,8 @@ public class Bodies {
             "\"description\": \"Описание\",\n" +
             "\"article_number\": \"валидное\"\n" +
             "}";
+
+    public String getBodyInvalidPrice(){
+        return bodyInvalidPrice;
+    }
 }
